@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\AuthorController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,3 +25,4 @@ Route::post('books', [BookController::class, 'store']);
 Route::get('books/{id}', [BookController::class, 'show']);
 Route::put('books/{id}', [BookController::class, 'update']);
 Route::delete('books/{id}', [BookController::class, 'destroy']);
+Route::resource('authors', AuthorController::class);
